@@ -110,7 +110,7 @@ typings/
 .dynamodb/
 
 # Dist
-.dist/
+dist/
 
 ### VisualStudioCode ###
 .vscode/*
