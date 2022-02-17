@@ -14,12 +14,23 @@
 
   {# Main header #}
 
-  <div class="header__container content-wrapper">
+  <div class="header__container content-wrapper flex justify-between items-center px-4 py-2.5 sm:px-6 xl:justify-start xl:space-x-10 bg-white">
 
     {# Logo #}
-
     <div class="header__logo">
-      {% module "site_logo" path="@hubspot/logo" %}
+      {% dnd_module
+        path="@hubspot/linked_image",
+        img={
+          "alt": "Waratek",
+          "loading": "disabled",
+          "max_height": 152,
+          "max_width": 50,
+          "size_type": "auto_custom_max",
+          "src": get_asset_url("../images/logo-dark.png")
+        },
+        offset=0,
+        width=6
+      %}
     </div>
 
   </div>
