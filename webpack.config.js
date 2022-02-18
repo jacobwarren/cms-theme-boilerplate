@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = ({ portal, autoupload }) => ({
   mode: "production",
 
-  entry: "./src/js/main.js",
+  entry: ["./src/js/main.js", "./src/css/main.css"],
 
   output: {
     path: path.resolve(__dirname, "dist"),
