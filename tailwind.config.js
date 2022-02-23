@@ -1,9 +1,5 @@
 module.exports = {
   content: [
-    '/src/**/*.html',
-    'src/templates/*/*.html',
-    'src/sections/*.html',
-    'src/modules/*/*.html',
     './src/**/*.html',
   ],
   darkMode: 'class', // 'media', // or 'media' or 'class'
