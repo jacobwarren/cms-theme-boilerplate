@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .span12 {
-  @apply w-full;
+  @apply w-full col-span-full;
 }
 
 .span6 {
-  @apply w-1/2;
+  @apply w-1/2 col-span-6;
 }
 
 .row-fluid {
