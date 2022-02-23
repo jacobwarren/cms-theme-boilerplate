@@ -3,32 +3,19 @@
   label: Header no navigation
 -->
 <header class="header header--no-navigation">
-
-  {# Top header drag and drop area #}
-
-  {% dnd_area "header-top"
-    label="Top header",
-    class="content-wrapper"
-  %}
-  {% end_dnd_area %}
-
   {# Main header #}
-
   <div class="header__container content-wrapper flex justify-between items-center px-4 py-2.5 sm:px-6 xl:justify-start xl:space-x-10 bg-white">
-
     {# Logo #}
     <div class="header__logo">
-      <img src="{{ get_asset_url('/hubspot-tailwind/images/logo-dark.png') }}" alt="Waratek" />
+      <img src="{{ get_asset_url('/waratek/images/logo-dark.png') }}" alt="Waratek" />
     </div>
 
+    {# Bottom header drag and drop area #}
+    {% dnd_area "header-side"
+      label="Header CTA",
+      class="content-wrapper"
+    %}
   </div>
-
-  {# Bottom header drag and drop area #}
-
-  {% dnd_area "header-bottom"
-    label="Bottom header",
-    class="content-wrapper"
-  %}
   {% end_dnd_area %}
 
 </header>
