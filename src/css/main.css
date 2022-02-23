@@ -6,6 +6,17 @@
   @apply w-full;
 }
 
-.row-fluid {
-  @apply max-w-screen-xl mx-auto px-4 py-8 sm:px-6 sm:py-10 lg:py-18 xl:py-32 lg:grid lg:grid-cols-2 lg:gap-8;
+.span6 {
+  @apply w-1/2;
 }
+
+.row-fluid {
+  @apply max-w-screen-xl mx-auto px-4;
+}
+
+@media (min-width: 768px) {
+  .row-fluid {
+    @apply px-6 grid grid-cols-12 gap-4 gap-y-6;
+  }
+}
+
