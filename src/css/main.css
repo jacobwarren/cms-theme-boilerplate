@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.span12 {
+  @apply w-full;
+}
+
+.row-fluid {
+  @apply max-w-screen-xl;
+}
