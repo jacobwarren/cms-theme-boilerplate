@@ -1,0 +1,22 @@
+{# Module styles #}
+{% set href = module.link.url.href %}
+{% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+{% set rel = [] %}
+{% if module.link.no_follow %}
+  {% do rel.append("nofollow") %}
+{% endif %}
+{% if module.link.open_in_new_tab %}
+  {% do rel.append("noopener") %}
+{% endif %}
+
+{# Button #}
+
+<a 
+  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700" 
+  {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+  href="{% if href %}{{ href }}{% else %}/register{% endif%}"
+>
+  {{ module.button_text }}
+</a>
